@@ -4,25 +4,21 @@ package com.example.android.reportcard;
 
 public class ReportCard {
 
-    // This is a global constant that represents the number of subjects
-    private int subjects = 7;
-
-    // These are global constants that are used to show the Final Result for the student: PASS or NO PASS.
-    public String PASS = "PASS";
-    public String NO_PASS = "NO PASS";
-
-    // This is a global constant that shows a default value when there is no assigned grade.
-    public String NO_GRADE = "NO GRADE";
-
     // Constants for the grades - they define grades A, B, C, D and E and they are used to assign the grades to the subjects.
     public static final String GRADE_A = "Excellent";
     public static final String GRADE_B = "Great";
     public static final String GRADE_C = "Good";
     public static final String GRADE_D = "Satisfactory";
     public static final String GRADE_E = "Fail";
+    // These are global constants that are used to show the Final Result for the student: PASS or NO PASS.
+    public static final String PASS = "PASS";
+    public static final String NO_PASS = "NO PASS";
+    // This is a global constant that shows a default value when there is no assigned grade.
+    public static final String NO_GRADE = "NO GRADE";
+    // This is a global constant that represents the number of subjects
+    final int SUBJECTS = 7;
 
     // Variables
-
     // This is a variable for the student name
     private String studentName;
 
@@ -45,22 +41,23 @@ public class ReportCard {
     private String finalResult;
 
     // This is the empty Constructor
-    public ReportCard(){
+    private ReportCard() {
     }
 
-    // This is the Constructor for most of the variables. It creates a new Report Card object.
-    //
-    // @param studentName       The name of the student
-    // @param studentID         The ID of the student
-    // @param studentYear       The year of study for the student
-    // @param gradeProgramming  The grade for Programming
-    // @param gradeMathematics  The grade for Mathematics
-    // @param gradeGeography    The grade for Geography
-    // @param gradeReligion     The grade for Religion
-    // @param gradeHistory      The grade for History
-    // @param gradeMusic        The grade for Music
-    // @param gradeArts         The grade for Arts
-    //
+    /**
+     * This is the Constructor for most of the variables. It creates a new Report Card object.
+     *
+     * @param studentName      The name of the student
+     * @param studentID        The ID of the student
+     * @param studentYear      The year of study for the student
+     * @param gradeProgramming The grade for Programming
+     * @param gradeMathematics The grade for Mathematics
+     * @param gradeGeography   The grade for Geography
+     * @param gradeReligion    The grade for Religion
+     * @param gradeHistory     The grade for History
+     * @param gradeMusic       The grade for Music
+     * @param gradeArts        The grade for Arts
+     */
     public ReportCard(String studentName, int studentID, int studentYear, String gradeProgramming, String gradeMathematics, String gradeGeography, String gradeReligion, String gradeHistory, String gradeMusic, String gradeArts) {
         this.studentName = studentName;
         this.studentID = studentID;
@@ -74,11 +71,17 @@ public class ReportCard {
         this.gradeArts = NO_GRADE;
     }
 
-    // Getters
-
+    /**
+     * Getters and Setters
+     */
     // Get the name of the student
     public String getStudentName() {
         return studentName;
+    }
+
+    // Set the name of the student
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 
     // Get the ID of the student
@@ -86,56 +89,14 @@ public class ReportCard {
         return studentID;
     }
 
-    // Get the year of study for the student
-    public int getStudentYear() {
-        return studentYear;
-    }
-
-    // Get the grade for Programming
-    public String getGradeProgramming() {
-        return gradeProgramming;
-    }
-
-    // Get the grade for Mathematics
-    public String getGradeMathematics() {
-        return gradeMathematics;
-    }
-
-    // Get the grade for Geography
-    public String getGradeGeography() {
-        return gradeGeography;
-    }
-
-    // Get the grade for Religion
-    public String getGradeReligion() {
-        return gradeReligion;
-    }
-
-    // Get the grade for History
-    public String getGradeHistory() {
-        return gradeHistory;
-    }
-
-    // Get the grade for Music
-    public String getGradeMusic() {
-        return gradeMusic;
-    }
-
-    // Get the grade for Arts
-    public String getGradeArts() {
-        return gradeArts;
-    }
-
-    //Setters
-
-    // Set the name of the student
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
-    }
-
     // Set the ID of the student
     public void setStudentID(int studentID) {
         this.studentID = studentID;
+    }
+
+    // Get the year of study for the student
+    public int getStudentYear() {
+        return studentYear;
     }
 
     // Set the year of study for the student
@@ -143,9 +104,19 @@ public class ReportCard {
         this.studentYear = studentYear;
     }
 
+    // Get the grade for Programming
+    public String getGradeProgramming() {
+        return gradeProgramming;
+    }
+
     // Set the grade for Programming
     public void setGradeProgramming(String gradeProgramming) {
         this.gradeProgramming = gradeProgramming;
+    }
+
+    // Get the grade for Mathematics
+    public String getGradeMathematics() {
+        return gradeMathematics;
     }
 
     // Set the grade for Mathematics
@@ -153,9 +124,19 @@ public class ReportCard {
         this.gradeMathematics = gradeMathematics;
     }
 
+    // Get the grade for Geography
+    public String getGradeGeography() {
+        return gradeGeography;
+    }
+
     // Set the grade for Geography
     public void setGradeGeography(String gradeGeography) {
         this.gradeGeography = gradeGeography;
+    }
+
+    // Get the grade for Religion
+    public String getGradeReligion() {
+        return gradeReligion;
     }
 
     // Set the grade for Religion
@@ -163,9 +144,19 @@ public class ReportCard {
         this.gradeReligion = gradeReligion;
     }
 
+    // Get the grade for History
+    public String getGradeHistory() {
+        return gradeHistory;
+    }
+
     // Set the grade for History
     public void setGradeHistory(String gradeHistory) {
         this.gradeHistory = gradeHistory;
+    }
+
+    // Get the grade for Music
+    public String getGradeMusic() {
+        return gradeMusic;
     }
 
     // Set the grade for Music
@@ -173,19 +164,25 @@ public class ReportCard {
         this.gradeMusic = gradeMusic;
     }
 
+    // Get the grade for Arts
+    public String getGradeArts() {
+        return gradeArts;
+    }
+
     // Set the grade for Arts
     public void setGradeArts(String gradeArts) {
         this.gradeArts = gradeArts;
     }
 
-    // This method calculates the Final Result for the student by using a for Loop.
-    //
-    // Create an Array of Strings to keep the grades for the 7 subjects
-    // Loop through the Array of Strings and add value 1 to a count integer for any subject that has GRADE E.
-    // Compare the count integer with a subjects integer that holds the number of subjects studied by the student by using if, else if statements.
-    // If the count integer has a value lower than the value of the subjects integer divided by 2, the Final Result for the student is PASS. If the count integer has a value higher than the value of the subjects integer divided by 2, the Final Result for the student is NO PASS.
-    // Return the Final Result.
-    //
+    /**
+     * This method calculates the Final Result for the student by using a for Loop.
+     * <p>
+     * Create an Array of Strings to keep the grades for the 7 subjects
+     * Loop through the Array of Strings and add value 1 to a count integer for any subject that has GRADE E.
+     * Compare the count integer with a subjects integer that holds the number of subjects studied by the student by using if, else if statements.
+     * If the count integer has a value lower than the value of the subjects integer divided by 2, the Final Result for the student is PASS. If the count integer has a value higher than the value of the subjects integer divided by 2, the Final Result for the student is NO PASS.
+     * Return the Final Result.
+     */
     public String getFinalResult() {
 
         // This is an Array of Strings that keeps the grades for the 7 subjects
@@ -200,10 +197,10 @@ public class ReportCard {
                 count++;
             }
 
-            if (count >= subjects / 2) {
+            if (count >= SUBJECTS / 2) {
                 finalResult = NO_PASS;
 
-            } else if (count <= subjects / 2) {
+            } else if (count <= SUBJECTS / 2) {
                 finalResult = PASS;
             }
         }
@@ -211,6 +208,7 @@ public class ReportCard {
     }
 
     // Return the Report Card by using the toString method and a String Builder
+    @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append("Student Name: ");
